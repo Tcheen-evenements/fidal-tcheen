@@ -46,11 +46,12 @@ body::before {
 }
 
 header {
-    background: linear-gradient(135deg, var(--teal), var(--blue));
+    background-color: var(--teal);
     color: white;
     padding: 2rem 0;
     position: relative;
     overflow: hidden;
+    text-align: center;
 }
 
 header::before {
@@ -74,15 +75,32 @@ header::before {
     margin: 1rem 0;
 }
 
+.logo-container {
+    background: white;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+}
+
 .logo {
     max-height: 50px;
     width: auto;
 }
 
+.logo-separator {
+    color: var(--teal);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 1rem;
+}
+
 .page-title {
     color: white;
     font-size: 2.5rem;
-    margin: 2rem 0;
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 800px;
     position: relative;
     z-index: 1;
 }
@@ -105,10 +123,11 @@ section {
 }
 
 h2 {
-    color: var(--blue);
+    color: var(--teal);
     border-bottom: 3px solid var(--orange);
     padding-bottom: 0.5rem;
     display: inline-block;
+    margin-bottom: 2rem;
 }
 
 h3 {
