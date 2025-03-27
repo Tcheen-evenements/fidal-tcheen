@@ -306,6 +306,20 @@ tr:hover {
     text-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
+.solutions-image {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+}
+
+.solutions-image-caption {
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
 @media (max-width: 768px) {
     .case-studies {
         grid-template-columns: 1fr;
