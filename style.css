@@ -306,11 +306,27 @@ tr:hover {
     text-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
+.solutions-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+    margin: 2rem 0;
+}
+
+.solutions-text {
+    padding-right: 1rem;
+}
+
+.solutions-image-container {
+    position: sticky;
+    top: 2rem;
+}
+
 .solutions-image {
     max-width: 100%;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    margin: 2rem 0;
 }
 
 .solutions-image-caption {
@@ -318,11 +334,40 @@ tr:hover {
     color: #6c757d;
     font-style: italic;
     margin-top: 0.5rem;
+    font-size: 0.9rem;
 }
 
 @media (max-width: 768px) {
     .case-studies {
         grid-template-columns: 1fr;
+    }
+    
+    .provider-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .provider-card {
+        padding: 1.5rem;
+    }
+    
+    .provider-image {
+        height: 150px;
+    }
+    
+    .event-types {
+        flex-direction: column;
+    }
+    
+    .event-tag {
+        font-size: 0.85rem;
+    }
+    
+    .solutions-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .solutions-text {
+        padding-right: 0;
     }
 }
 
@@ -372,28 +417,6 @@ tr:hover {
 
 .contact-details a:hover {
     text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-    .provider-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .provider-card {
-        padding: 1.5rem;
-    }
-    
-    .provider-image {
-        height: 150px;
-    }
-    
-    .event-types {
-        flex-direction: column;
-    }
-    
-    .event-tag {
-        font-size: 0.85rem;
-    }
 }
 
 footer {
