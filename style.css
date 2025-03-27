@@ -1,9 +1,12 @@
 :root {
-    --primary-color: #2F855A;
-    --secondary-color: #276749;
-    --background-color: #F7FAFC;
-    --text-color: #2D3748;
-    --light-gray: #EDF2F7;
+    --dark: #2e2d2c;
+    --orange: #e74011;
+    --teal: #1ea7ac;
+    --yellow: #efd857;
+    --green: #6cbe99;
+    --pink: #eebcd8;
+    --blue: #3c4488;
+    --light-bg: #f8f9fa;
 }
 
 * {
@@ -13,18 +16,42 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--background-color);
+    color: var(--dark);
+    margin: 0;
+    background-color: white;
+    background-image: url('images/providers/signature-background.png');
+    background-repeat: repeat;
+    background-size: 400px;
+    background-opacity: 0.1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 header {
-    background-color: var(--primary-color);
+    background: linear-gradient(135deg, var(--teal), var(--blue));
     color: white;
-    padding: 4rem 2rem;
-    text-align: center;
-    margin-bottom: 2rem;
+    padding: 2rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/providers/signature-pattern.png');
+    background-size: cover;
+    opacity: 0.1;
+    z-index: 0;
 }
 
 .logos {
@@ -41,10 +68,11 @@ header {
 }
 
 .page-title {
-    text-align: center;
-    font-size: 2rem;
-    color: #2c3e50;
+    color: white;
+    font-size: 2.5rem;
     margin: 2rem 0;
+    position: relative;
+    z-index: 1;
 }
 
 .hero h1 {
@@ -65,13 +93,14 @@ section {
 }
 
 h2 {
-    color: var(--primary-color);
-    margin-bottom: 2rem;
-    font-size: 2rem;
+    color: var(--blue);
+    border-bottom: 3px solid var(--orange);
+    padding-bottom: 0.5rem;
+    display: inline-block;
 }
 
 h3 {
-    color: var(--secondary-color);
+    color: var(--teal);
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
@@ -99,16 +128,16 @@ table {
 th, td {
     padding: 1rem;
     text-align: left;
-    border-bottom: 1px solid var(--light-gray);
+    border-bottom: 1px solid var(--light-bg);
 }
 
 th {
-    background-color: var(--primary-color);
+    background-color: var(--teal);
     color: white;
 }
 
 tr:hover {
-    background-color: var(--light-gray);
+    background-color: var(--light-bg);
 }
 
 .solution-card {
@@ -138,7 +167,7 @@ tr:hover {
 }
 
 .provider-section h3 {
-    color: #2D5234;
+    color: var(--blue);
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
 }
@@ -185,7 +214,7 @@ tr:hover {
 }
 
 .provider-content h4 {
-    color: #1A321E;
+    color: var(--blue);
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
@@ -198,8 +227,8 @@ tr:hover {
 }
 
 .event-tag {
-    background-color: #E8F3EA;
-    color: #2D5234;
+    background-color: var(--yellow);
+    color: var(--dark);
     padding: 0.4rem 0.8rem;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -208,7 +237,7 @@ tr:hover {
 }
 
 .event-tag:hover {
-    background-color: #2D5234;
+    background-color: var(--blue);
     color: white;
 }
 
@@ -219,7 +248,7 @@ tr:hover {
 }
 
 .features li {
-    color: #4A6B50;
+    color: var(--dark);
     font-size: 0.95rem;
     margin-bottom: 0.5rem;
     display: flex;
@@ -228,15 +257,15 @@ tr:hover {
 
 .swiper-button-next,
 .swiper-button-prev {
-    color: #2D5234;
+    color: var(--blue);
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #2D5234;
+    background-color: var(--blue);
 }
 
 .section-subtitle {
-    color: #2D5234;
+    color: var(--blue);
     font-size: 1.5rem;
     margin: 2rem 0 1rem;
     text-align: center;
@@ -250,20 +279,21 @@ tr:hover {
 }
 
 .case-study {
-    background-color: #f8f9fa;
-    border-radius: 12px;
+    background-color: var(--light-bg);
+    border-color: var(--teal);
     padding: 1.5rem;
-    border: 1px solid #e9ecef;
-    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid var(--teal);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .case-study:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(30, 167, 172, 0.1);
 }
 
 .case-study h3 {
-    color: #2c3e50;
+    color: var(--blue);
     margin-bottom: 1rem;
     font-size: 1.25rem;
     display: flex;
@@ -276,19 +306,18 @@ tr:hover {
 }
 
 .case-study p {
-    color: #6c757d;
+    color: var(--dark);
     margin: 0;
     line-height: 1.6;
 }
 
 .case-study strong {
-    color: #28a745;
-    font-weight: 600;
+    color: var(--orange);
 }
 
 .case-study a {
     display: inline-block;
-    color: #007bff;
+    color: var(--blue);
     text-decoration: none;
     margin-top: 1rem;
     font-weight: 500;
@@ -312,6 +341,20 @@ tr:hover {
     gap: 2rem;
     align-items: start;
     margin: 2rem 0;
+    position: relative;
+}
+
+.solutions-content::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 100px;
+    height: 100px;
+    background-image: url('images/providers/signature-corner.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.2;
 }
 
 .solutions-text {
@@ -331,10 +374,71 @@ tr:hover {
 
 .solutions-image-caption {
     text-align: center;
-    color: #6c757d;
+    color: var(--dark);
     font-style: italic;
     margin-top: 0.5rem;
     font-size: 0.9rem;
+}
+
+.solutions strong {
+    color: var(--teal);
+}
+
+.contact {
+    background-color: var(--light-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 1.5rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.contact-button {
+    background-color: var(--orange);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: 2px solid var(--orange);
+}
+
+.contact-button:hover {
+    background-color: transparent;
+    color: var(--orange);
+}
+
+.contact-details {
+    margin-top: 1.5rem;
+}
+
+.contact-details a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: var(--teal);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
 }
 
 @media (max-width: 768px) {
@@ -369,62 +473,6 @@ tr:hover {
     .solutions-text {
         padding-right: 0;
     }
-}
-
-.contact {
-    background-color: #f8f9fa;
-    padding: 2rem;
-    border-radius: 8px;
-    margin: 2rem 0;
-    text-align: center;
-}
-
-.contact h2 {
-    margin-bottom: 1.5rem;
-}
-
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-    margin-bottom: 2rem;
-}
-
-.contact-button {
-    display: inline-block;
-    background-color: #28a745;
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.contact-button:hover {
-    background-color: #218838;
-}
-
-.contact-details {
-    margin-top: 1.5rem;
-}
-
-.contact-details a {
-    color: #2c3e50;
-    text-decoration: none;
-}
-
-.contact-details a:hover {
-    text-decoration: underline;
-}
-
-footer {
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 2rem;
-    margin-top: 4rem;
 }
 
 @media (max-width: 768px) {
