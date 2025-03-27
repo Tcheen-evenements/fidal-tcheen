@@ -21,10 +21,22 @@ body {
     color: var(--dark);
     margin: 0;
     background-color: white;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-image: url('images/providers/signature-background.png');
     background-repeat: repeat;
     background-size: 400px;
-    background-opacity: 0.1;
+    opacity: 0.1;
+    z-index: -1;
+    pointer-events: none;
 }
 
 .container {
